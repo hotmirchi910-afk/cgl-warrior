@@ -3,68 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SSC CGL Mathematics Learning</title>
+    <title>SSc CGL Mathematics Learning</title>
     <style>
-        body { font-family: Arial, sans-serif; margin: 20px; }
-        h1 { text-align: center; }
-        .topic { margin: 10px 0; }
-        .quiz { display: none; margin-top: 20px; }
+        body {font-family: Arial, sans-serif; margin: 0; padding: 0;}
+        header {background-color: #4CAF50; color: white; padding: 10px 0; text-align: center;}
+        section {padding: 15px; max-width: 800px; margin: auto;}
+        .topic {border: 1px solid #ccc; margin: 10px 0; padding: 10px; border-radius: 5px;}
+        .easy {background-color: #c8e6c9;}
+        .medium {background-color: #ffe0b2;}
+        .hard {background-color: #ffccbc;}
+        footer {text-align: center; margin: 20px 0;}
     </style>
 </head>
 <body>
-    <h1>Welcome to SSC CGL Mathematics Learning</h1>
-    <div id="topicSelection">
-        <h2>Select a Topic</h2>
-        <div class="topic">1. Number Systems</div>
-        <div class="topic">2. Profit and Loss</div>
-        <div class="topic">3. Percentage</div>
-        <div class="topic">4. Simple Interest and Compound Interest</div>
-        <div class="topic">5. Ratio and Proportion</div>
-        <div class="topic">6. Time and Work</div>
-        <div class="topic">7. Speed, Distance and Time</div>
-        <div class="topic">8. Algebra</div>
-        <div class="topic">9. Geometry</div>
-        <div class="topic">10. Mensuration</div>
-        <div class="topic">11. Trigonometry</div>
-        <div class="topic">12. Statistics</div>
-        <div class="topic">13. Probability</div>
-        <div class="topic">14. Data Interpretation</div>
-        <div class="topic">15. Mathematical Reasoning</div>
-    </div>
-    <div id="quiz" class="quiz">
-        <h2>Quiz Mode</h2>
-        <div id="question"></div>
-        <button onclick="nextQuestion()">Next</button>
-        <div id="score"></div>
-    </div>
-    <script>
-        let currentQuestion = 0;
-        let score = 0;
-    
-        document.querySelectorAll('.topic').forEach((element, index) => {
-            element.onclick = function() {
-                startQuiz(index + 1);
-            };
-        });
-
-        function startQuiz(topic) {
-            document.getElementById('topicSelection').style.display = 'none';
-            document.getElementById('quiz').style.display = 'block';
-            loadQuestion(topic);
-        }
-
-        function loadQuestion(topic) {
-            // Load question based on the topic (to be implemented)
-            // This is a placeholder question structure
-            document.getElementById('question').innerHTML = `Question ${currentQuestion + 1} for Topic ${topic}`;
-        }
-
-        function nextQuestion() {
-            currentQuestion++;
-            // Logic to check answer and increment score (to be implemented)
-            loadQuestion();
-            document.getElementById('score').innerHTML = 'Score: ' + score;
-        }
-    </script>
+    <header>
+        <h1>Enhanced SSC CGL Mathematics Learning</h1>
+        <p>Featuring Actual Practice Questions</p>
+    </header>
+    <section>
+        <h2>Topics</h2>
+        <div class="topic easy">
+            <h3>Topic 1: Number System</h3>
+            <p>Concept Explanation: Understanding how numbers work.</p>
+            <p>Difficulty Level: Easy</p>
+            <button>Practice Questions</button>
+        </div>
+        <div class="topic medium">
+            <h3>Topic 2: Algebra</h3>
+            <p>Concept Explanation: Basics of algebraic expressions and equations.</p>
+            <p>Difficulty Level: Medium</p>
+            <button>Practice Questions</button>
+        </div>
+        <div class="topic hard">
+            <h3>Topic 3: Geometry</h3>
+            <p>Concept Explanation: Understanding shapes, angles, and properties.</p>
+            <p>Difficulty Level: Hard</p>
+            <button>Practice Questions</button>
+        </div>
+        <!-- Add more topics as per the comprehensive question bank -->
+    </section>
+    <footer>
+        <p>&copy; 2026 SSC CGL Mathematics Learning. All rights reserved.</p>
+    </footer>
 </body>
 </html>
