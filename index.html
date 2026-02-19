@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SSC CGL Mathematics Learning</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        h1 { text-align: center; }
+        .topic { margin: 10px 0; }
+        .quiz { display: none; margin-top: 20px; }
+    </style>
+</head>
+<body>
+    <h1>Welcome to SSC CGL Mathematics Learning</h1>
+    <div id="topicSelection">
+        <h2>Select a Topic</h2>
+        <div class="topic">1. Number Systems</div>
+        <div class="topic">2. Profit and Loss</div>
+        <div class="topic">3. Percentage</div>
+        <div class="topic">4. Simple Interest and Compound Interest</div>
+        <div class="topic">5. Ratio and Proportion</div>
+        <div class="topic">6. Time and Work</div>
+        <div class="topic">7. Speed, Distance and Time</div>
+        <div class="topic">8. Algebra</div>
+        <div class="topic">9. Geometry</div>
+        <div class="topic">10. Mensuration</div>
+        <div class="topic">11. Trigonometry</div>
+        <div class="topic">12. Statistics</div>
+        <div class="topic">13. Probability</div>
+        <div class="topic">14. Data Interpretation</div>
+        <div class="topic">15. Mathematical Reasoning</div>
+    </div>
+    <div id="quiz" class="quiz">
+        <h2>Quiz Mode</h2>
+        <div id="question"></div>
+        <button onclick="nextQuestion()">Next</button>
+        <div id="score"></div>
+    </div>
+    <script>
+        let currentQuestion = 0;
+        let score = 0;
+    
+        document.querySelectorAll('.topic').forEach((element, index) => {
+            element.onclick = function() {
+                startQuiz(index + 1);
+            };
+        });
+
+        function startQuiz(topic) {
+            document.getElementById('topicSelection').style.display = 'none';
+            document.getElementById('quiz').style.display = 'block';
+            loadQuestion(topic);
+        }
+
+        function loadQuestion(topic) {
+            // Load question based on the topic (to be implemented)
+            // This is a placeholder question structure
+            document.getElementById('question').innerHTML = `Question ${currentQuestion + 1} for Topic ${topic}`;
+        }
+
+        function nextQuestion() {
+            currentQuestion++;
+            // Logic to check answer and increment score (to be implemented)
+            loadQuestion();
+            document.getElementById('score').innerHTML = 'Score: ' + score;
+        }
+    </script>
+</body>
+</html>
