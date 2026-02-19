@@ -3,44 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SSc CGL Mathematics Learning</title>
+    <title>SSC CGL Mathematics Learning</title>
     <style>
-        body {font-family: Arial, sans-serif; margin: 0; padding: 0;}
-        header {background-color: #4CAF50; color: white; padding: 10px 0; text-align: center;}
-        section {padding: 15px; max-width: 800px; margin: auto;}
-        .topic {border: 1px solid #ccc; margin: 10px 0; padding: 10px; border-radius: 5px;}
-        .easy {background-color: #c8e6c9;}
-        .medium {background-color: #ffe0b2;}
-        .hard {background-color: #ffccbc;}
-        footer {text-align: center; margin: 20px 0;}
+        body { font-family: Arial, sans-serif; margin: 0; padding: 20px; }
+        .topic-card { border: 1px solid #ccc; padding: 15px; margin: 10px 0; border-radius: 5px; }
+        .progress-bar { width: 100%; background-color: #f3f3f3; border-radius: 5px; }
+        .progress { height: 20px; background-color: #4caf50; width: 0%; border-radius: 5px; }
     </style>
+    <script>
+        function updateProgress(current, total) {
+            const progress = (current / total) * 100;
+            document.getElementById('progress-bar').style.width = progress + '%';
+        }
+    </script>
 </head>
 <body>
     <header>
-        <h1>Enhanced SSC CGL Mathematics Learning</h1>
-        <p>Featuring Actual Practice Questions</p>
+        <h1>SSC CGL Mathematics Learning Website</h1>
     </header>
     <section>
         <h2>Topics</h2>
-        <div class="topic easy">
-            <h3>Topic 1: Number System</h3>
-            <p>Concept Explanation: Understanding how numbers work.</p>
-            <p>Difficulty Level: Easy</p>
-            <button>Practice Questions</button>
+        <div class="topic-card"><h3>1. Arithmetic</h3><p>Concept explanation of arithmetic and important formulas.</p><p>Practice Questions (Easy, Medium, Hard)</p></div>
+        <div class="topic-card"><h3>2. Number System</h3><p>Dive into the number system with explanations and examples.</p><p>Practice Questions (Easy, Medium, Hard)</p></div>
+        <div class="topic-card"><h3>3. Algebra</h3><p>Understanding algebraic expressions and equations.</p><p>Practice Questions (Easy, Medium, Hard)</p></div>
+        <div class="topic-card"><h3>4. Geometry</h3><p>Explore geometric shapes and their properties.</p><p>Practice Questions (Easy, Medium, Hard)</p></div>
+        <div class="topic-card"><h3>5. Mensuration</h3><p>Learn about calculating areas and volumes.</p><p>Practice Questions (Easy, Medium, Hard)</p></div>
+        <div class="topic-card"><h3>6. Trigonometry</h3><p>Trigonometric ratios and properties.</p><p>Practice Questions (Easy, Medium, Hard)</p></div>
+        <div class="topic-card"><h3>7. Statistics</h3><p>Introduction to data collection and analysis.</p><p>Practice Questions (Easy, Medium, Hard)</p></div>
+        <div class="topic-card"><h3>8. Probability</h3><p>Understanding chances and probability concepts.</p><p>Practice Questions (Easy, Medium, Hard)</p></div>
+        <div class="topic-card"><h3>9. Speed, Distance and Time</h3><p>Learn the formulas and applications related to speed, distance and time.</p><p>Practice Questions (Easy, Medium, Hard)</p></div>
+        <div class="topic-card"><h3>10. Ratio and Proportion</h3><p>Concepts of ratio, proportion, and their applications.</p><p>Practice Questions (Easy, Medium, Hard)</p></div>
+        <div class="topic-card"><h3>11. Simple Interest and Compound Interest</h3><p>Understanding financial maths.</p><p>Practice Questions (Easy, Medium, Hard)</p></div>
+        <div class="topic-card"><h3>12. Time and Work</h3><p>Learn about work efficiency and time calculation.</p><p>Practice Questions (Easy, Medium, Hard)</p></div>
+        <div class="topic-card"><h3>13. Profit and Loss</h3><p>Understanding how to calculate profit and loss.</p><p>Practice Questions (Easy, Medium, Hard)</p></div>
+        <div class="topic-card"><h3>14. LaTeX for equations</h3><p>Using LaTeX for mathematical equations.</p><p>Practice Questions (Easy, Medium, Hard)</p></div>
+        <div class="topic-card"><h3>15. Miscellaneous topics</h3><p>Covering random topics from different sections.</p><p>Practice Questions (Easy, Medium, Hard)</p></div>
+    </section>
+    <section>
+        <h2>Score Tracking</h2>
+        <p>Interactive score tracking system to monitor your progress!</p>
+        <div class="progress-bar">
+            <div id="progress-bar" class="progress"></div>
         </div>
-        <div class="topic medium">
-            <h3>Topic 2: Algebra</h3>
-            <p>Concept Explanation: Basics of algebraic expressions and equations.</p>
-            <p>Difficulty Level: Medium</p>
-            <button>Practice Questions</button>
-        </div>
-        <div class="topic hard">
-            <h3>Topic 3: Geometry</h3>
-            <p>Concept Explanation: Understanding shapes, angles, and properties.</p>
-            <p>Difficulty Level: Hard</p>
-            <button>Practice Questions</button>
-        </div>
-        <!-- Add more topics as per the comprehensive question bank -->
+    </section>
+    <section>
+        <h2>Quiz Mode</h2>
+        <p>Engage in quiz mode with instant feedback.</p>
     </section>
     <footer>
         <p>&copy; 2026 SSC CGL Mathematics Learning. All rights reserved.</p>
