@@ -1,44 +1,56 @@
-// SSC CGL Mathematics Learning Script
-// This script helps users learn mathematics concepts for SSC CGL exam preparation
-
-const topics = [
-    { name: "Arithmetic", difficulty: ["Easy", "Medium", "Hard"], questions: [] },
-    { name: "Algebra", difficulty: ["Easy", "Medium", "Hard"], questions: [] },
-    { name: "Geometry", difficulty: ["Easy", "Medium", "Hard"], questions: [] },
-    { name: "Mensuration", difficulty: ["Easy", "Medium", "Hard"], questions: [] },
-    { name: "Trigonometry", difficulty: ["Easy", "Medium", "Hard"], questions: [] },
-    { name: "Statistics", difficulty: ["Easy", "Medium", "Hard"], questions: [] },
-    { name: "Probability", difficulty: ["Easy", "Medium", "Hard"], questions: [] },
-    { name: "Time and Work", difficulty: ["Easy", "Medium", "Hard"], questions: [] },
-    { name: "Time, Speed and Distance", difficulty: ["Easy", "Medium", "Hard"], questions: [] },
-    { name: "Simple Interest", difficulty: ["Easy", "Medium", "Hard"], questions: [] },
-    { name: "Compound Interest", difficulty: ["Easy", "Medium", "Hard"], questions: [] },
-    { name: "Ratio and Proportion", difficulty: ["Easy", "Medium", "Hard"], questions: [] },
-    { name: "Partnership", difficulty: ["Easy", "Medium", "Hard"], questions: [] },
-    { name: "Profit and Loss", difficulty: ["Easy", "Medium", "Hard"], questions: [] },
-    { name: "Data Interpretation", difficulty: ["Easy", "Medium", "Hard"], questions: [] },
-    { name: "Number System", difficulty: ["Easy", "Medium", "Hard"], questions: [] }
+let questions = [
+{q:"20% of 450 = ?", options:["45","60","75","90"], answer:"90"},
+{q:"25 × 16 = ?", options:["300","350","375","400"], answer:"400"},
+{q:"√144 = ?", options:["10","11","12","13"], answer:"12"},
+{q:"If 5x = 45, x = ?", options:["5","6","7","9"], answer:"9"},
+{q:"12² = ?", options:["124","144","164","134"], answer:"144"}
 ];
 
-// Function to add concept explanation
-function addConceptExplanation(topic, explanation) {
-    // Implementation here
+let currentQuestion = 0;
+let score = 0;
+
+const questionEl = document.getElementById("question");
+const optionsEl = document.querySelectorAll(".option");
+const resultEl = document.getElementById("result");
+const scoreEl = document.getElementById("score");
+
+function loadQuestion(){
+let q = questions[currentQuestion];
+questionEl.innerText = q.q;
+
+optionsEl.forEach((btn, index)=>{
+    btn.innerText = q.options[index];
+});
+
+resultEl.innerText="";
+
 }
 
-// Function to add practice question
-function addPracticeQuestion(topic, question, answer, difficulty) {
-    // Implementation here
+function checkAnswer(button){
+let selected = button.innerText;
+let correct = questions[currentQuestion].answer;
+
+if(selected === correct){
+    resultEl.innerText="✅ Correct!";
+    score++;
+    scoreEl.innerText=score;
+}else{
+    resultEl.innerText="❌ Wrong! Correct: "+correct;
 }
 
-// Function for progress tracking
-function trackProgress(userId) {
-    // Implementation here
 }
 
-// Function for scoring
-function calculateScore(userAnswers) {
-    // Implementation here
+function nextQuestion(){
+currentQuestion++;
+
+if(currentQuestion >= questions.length){
+    questionEl.innerText="Quiz Completed!";
+    resultEl.innerText="Final Score: "+score;
+    return;
 }
 
-// Basic setup for demonstration
-console.log("Welcome to SSC CGL Mathematics Learning!");
+loadQuestion();
+
+}
+
+loadQuestion();
